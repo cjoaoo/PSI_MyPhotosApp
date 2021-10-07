@@ -16,7 +16,8 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true, parameterLimit: 5
 
 app.use(cors());
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://localhost:27017/MyPhotos';
+var mongoDB = 'mongodb+srv://guest:fsuvWcZ6Q6UEF01F@cluster0.hih6e.mongodb.net/psi?retryWrites=true&w=majority';
+//var mongoDB = 'mongodb://localhost:27017/MyPhotos';
 mongoose.set('useCreateIndex', true);
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
